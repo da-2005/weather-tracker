@@ -1,0 +1,5 @@
+.custom-jumbotron {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-image: linear-gradient(to right, rgb(20,118,250), rgb(70,14,245));
+}
