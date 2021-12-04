@@ -3,7 +3,13 @@
 }
 
 .custom-jumbotron {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     background-image: linear-gradient(to right, rgb(20,118,250), rgb(70,14,245));
+}
+
+.custom-button {
+    margin-top: 16px;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
 }
