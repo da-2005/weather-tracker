@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
     <title>Weather Tracker</title>
 </head>
 <body>
@@ -15,37 +16,63 @@
           <h1 class="display-4 text-center text-white">Weather Dashboard</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title font-weight-bold">Search for a City:</h3>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-              <button type="button" class="btn btn-primary btn-lg btn-block custom-button">Search</button>
-              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+
+    <div class="container-fluid">
+        <div class="row content-row">
+            <div class="col-12 col-md-3 bg-light pt-3">
+                <h5>Search for a city:</h5>
+                <form>
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" id="search-city" placeholder="Enter city here">
+                        <div class="input-group-append">
+                            <button class="btn btn-info" type="button" id="search-city-button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Seach History -->
+                <div class="card">
+                    <ul class="list-group list-group-flush" id="search-history-list">
+                        <!-- <li class="list-group-item"></li> -->
+                        
+                    </ul>
+                    <button id="clear-history" class="btn btn-sm btn-secondary hide">Clear History</button>
+                </div>
             </div>
-          </div>
+            <div id="weather-content" class="col-12 col-md-9 hide">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="city-info border rounded my-3 px-3 py-3">
+                            <h2 id="current-city">City Information <small class="text-muted" id="current-date"></small></h2>
+
+                            <p class="mb-0">Temperature: <span id="current-temp"></span></p>
+                            <p class="mb-0">Humidity: <span id="current-humidity"></span></p>
+                            <p class="mb-0">Wind Speed: <span id="current-wind-speed"></span></p>
+                            <p>UV index: <span id="uv-index"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>5-Day Forecast</h3>
+                        
+                    </div>
+                </div>
+                <div id="five-day-forecast" class="row">
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">Date</h5>
+                            <i class="fa fa-sun"></i>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title font-weight-bold">City Name</h3>
-              <p class="card-text">City Info</p>
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="row d-flex flex-row-reverse">
-        <div class="col-sm-12 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title font-weight-bold">5-Day Forecast</h5>
-                <p class="card-text">Forecast Cards</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-              </div>
-            </div>
-          </div>     
     </div>
  
     
@@ -72,5 +99,6 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" 
     integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
