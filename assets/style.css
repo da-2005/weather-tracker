@@ -8,8 +8,32 @@
     background-image: linear-gradient(to right, rgb(20,118,250), rgb(70,14,245));
 }
 
-.custom-button {
-    margin-top: 16px;
-    background-color: cornflowerblue;
-    border-color: cornflowerblue;
+html, body, .container-fluid, .content-row {
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.city-btn:hover {
+    background-color: #f6f5f5;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #cce5ff;
+}
+
+.uvIndex1 {
+    background-color: green;
+}
+.uvIndex2 {
+    background-color: yellow;
+}
+.uvIndex3 {
+    background-color: orange;
+}
+.uvIndex4 {
+    background-color: red;
 }
