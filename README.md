@@ -1,5 +1,15 @@
 # weather-tracker
 
+## Technologies
+For this application, I used: 
+- HTML
+- CSS
+- JavaScript
+- Bootstrap 
+- jQuery
+- Moment
+- OpenWeatherMap API
+
 ## Description
 This weather tracker allows a user to: 
 - check the current weather of a city by inputing the city's name in the search bar 
@@ -17,3 +27,7 @@ https://user-images.githubusercontent.com/90587395/144780767-82621d70-7257-4318-
 
 ## Live URL
 https://da-2005.github.io/weather-tracker/
+
+## Contact
+- Email: alvarezderrick0@gmail.com
+- Cell: (323) 744-9916
